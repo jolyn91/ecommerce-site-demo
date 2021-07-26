@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It runs with TypeScript, React-Bootstrap, redux-saga.  
 
-In [**`config.ts`**](https://github.com/jolyn91/ecommerce-site-demo/src/config.ts), please update API keys and store IDs accordingly.
+In [**`config.ts`**](https://github.com/jolyn91/ecommerce-site-demo/blob/main/src/config.ts), please update API keys and store IDs accordingly.
 
 ## Dependencies 
 Project requirements:
