@@ -1,0 +1,65 @@
+@import "custom";
+
+body {
+  margin: 0;
+  font-family: 'overpass-regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'overpass-semibold', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-size: 1.5rem;
+}
+
+.navbar, .btn, div {
+  font-family: 'overpass-semibold', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+.navbar{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+@font-face {
+  font-family: 'overpass-regular';
+  src: local('Overpass'), url(./assets/fonts/Overpass/Overpass-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'overpass-thin';
+  src: local('Overpass'), url(./assets/fonts/Overpass/Overpass-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'overpass-extralight';
+  src: local('Overpass'), url(./assets/fonts/Overpass/Overpass-ExtraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'overpass-semibold';
+  src: local('Overpass'), url(./assets/fonts/Overpass/Overpass-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'overpass-semibolditalic';
+  src: local('Overpass'), url(./assets/fonts/Overpass/Overpass-SemiBoldItalic.ttf) format('truetype');
+}
+
+.toast {
+  z-index: 1000;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}

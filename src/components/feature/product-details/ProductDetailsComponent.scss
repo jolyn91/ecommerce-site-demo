@@ -1,0 +1,43 @@
+@import "~bootstrap/scss/bootstrap"; // to use mixins
+
+.product-details {
+
+  .img-col {
+    display: flex;
+    img {
+      max-width: 80vw;
+      max-height: 50vh;
+      object-fit: scale-down;
+      height: auto;
+    }
+  }
+
+  .text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    >div {
+      margin: 0.5rem 0;
+    }
+    .price {
+      color: #747a76;
+      font-size: 0.9rem;
+    }
+    .checkout-btn {
+      margin: 1rem 0;
+      color: white;
+      width: auto;
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    .text-col {
+      >div {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+
+}

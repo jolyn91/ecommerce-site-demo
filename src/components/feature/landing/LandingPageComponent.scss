@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap"; // to use mixins
+
+.landing-page {
+
+  .product-card {
+    width: 15rem;
+    margin: 0 auto 1rem;
+    border-radius: 10px;
+    border: 0;
+    background: #f7f8f9;
+    padding: 1.5rem;
+    img {
+      mix-blend-mode: multiply;
+    }
+    .price {
+      color: #747a76;
+      font-size: 0.9rem;
+    }
+  }
+
+  h1 {
+    font-size: 5.5rem;
+    font-family: 'overpass-semibold', sans-serif;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+  }
+
+}
