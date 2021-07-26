@@ -33,9 +33,9 @@ export function* doCheckout_() {
 
         const response = yield call(request, endpoint, options);
         const data: ICheckoutResponse = yield response.json();
-        console.log('data', data);
 
-        window.location.href = data.checkout_url;
+        if (!data || data.error) yield put(showToastError(true));
+        else window.location.href = data.checkout_url;
     } catch (e) {
         console.error('error checking out', e);
         yield put(showToastError(true));
