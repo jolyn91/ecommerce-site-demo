@@ -12,7 +12,7 @@ export enum ReactEnv {
 
 switch (process.env.NODE_ENV) {
     case ReactEnv.DEV:
-        API_SERVER_VAL = `${proxy}/https://api.ablr.com`;
+        API_SERVER_VAL = `${proxy}/https://api.uat.ablr.com`;
         break;
     case ReactEnv.PROD:
         API_SERVER_VAL = `${proxy}/https://api.uat.ablr.com`;
