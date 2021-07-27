@@ -1,7 +1,5 @@
 import {ICheckoutReq, StoreType} from "../../types/common/CommonTypes";
 import {IProduct} from "../../types/feature/LandingPageComponentTypes";
-import {config} from "../../config";
-import {ReactEnv} from "../../settings";
 
 export const getProductPrice = (store: StoreType, price: string): string => {
     switch (store) {
@@ -23,21 +21,22 @@ export const getCheckoutDetails = (store: StoreType): ICheckoutReq => {
     switch (store) {
         case StoreType.MALAYSIA:
             return {
-                storeId: process.env.NODE_ENV === ReactEnv.PROD ? process.env.MY_STORE_ID : config.MY.STORE_ID,
+                storeId: process.env.REACT_APP_MY_STORE_ID,
                 currency: 'MYR',
-                token: process.env.NODE_ENV === ReactEnv.PROD ? process.env.MY_API_KEY : config.MY.API_KEY
+                token: process.env.REACT_APP_MY_API_KEY
             };
         case StoreType.SINGAPORE:
+            console.error(process.env.REACT_APP_SG_STORE_ID, process.env.REACT_APP_SG_API_KEY)
             return {
-                storeId: process.env.NODE_ENV === ReactEnv.PROD ? process.env.SG_STORE_ID : config.SG.STORE_ID,
+                storeId: process.env.REACT_APP_SG_STORE_ID,
                 currency: 'SGD',
-                token: process.env.NODE_ENV === ReactEnv.PROD ? process.env.SG_API_KEY : config.SG.API_KEY
+                token: process.env.REACT_APP_SG_API_KEY
             };
         default:
             return {
-                storeId: process.env.NODE_ENV === ReactEnv.PROD ? process.env.SG_STORE_ID : config.SG.STORE_ID,
+                storeId: process.env.REACT_APP_SG_STORE_ID,
                 currency: 'SGD',
-                token: process.env.NODE_ENV === ReactEnv.PROD ? process.env.SG_API_KEY : config.SG.API_KEY
+                token: process.env.REACT_APP_SG_API_KEY
             };
     }
 }

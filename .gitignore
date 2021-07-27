@@ -10,7 +10,7 @@
 
 # production
 /build
-/src/config.ts
+.env.development
 
 # misc
 .DS_Store
