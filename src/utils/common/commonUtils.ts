@@ -26,7 +26,6 @@ export const getCheckoutDetails = (store: StoreType): ICheckoutReq => {
                 token: process.env.REACT_APP_MY_API_KEY
             };
         case StoreType.SINGAPORE:
-            console.error(process.env.REACT_APP_SG_STORE_ID, process.env.REACT_APP_SG_API_KEY)
             return {
                 storeId: process.env.REACT_APP_SG_STORE_ID,
                 currency: 'SGD',
